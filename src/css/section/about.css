@@ -1,0 +1,63 @@
+
+/* ABOUT ME SECTION*/
+.s2-sec-about {
+  margin-top: clamp(50px, 10vw, 75px);
+  padding-inline: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .desc {
+  max-width: 400px;
+}
+  
+}
+.s2-sec-about .wrap {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: clamp(10px, 1.5vw ,40px);
+}
+.about-p {
+  gap: 40px;
+}
+
+.about-p p {
+  max-width: 400px;
+  padding: 4px 9px;
+  font-size: 1.3rem;
+}
+.about-p .b {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: start;
+}
+.about-p .b span,
+.s1-div-iconandpwrap p {
+  color: var(--clr-10);
+  filter: brightness(.95);
+  padding: 2px;
+  font-size: 1rem;
+  font-weight: 100;
+}
+.about-p h3 {
+  max-width: 450px;
+  padding-block: 6px;
+}
+.about-p :nth-child(3) {
+  padding-bottom: 3px;
+}
+.about-p div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about-p div img {
+  height: 20px;
+}

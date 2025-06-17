@@ -1,0 +1,29 @@
+footer {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--clr-40);
+  color: var(--clr-60);
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    justify-content: space-between;
+    padding-inline: clamp(20px, 8vw, 100px);
+    padding-block: clamp(20px, 30vh, 0px) 100px;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    padding-inline: clamp(20px, 8vw, 100px);
+    padding-block: clamp(50px, 10vh, 100px);
+
+    p {
+      margin-top: 5px;
+      text-align: justify;
+      max-width: clamp(300px, calc(54vw - 40px), 350px);
+    }
+  }
+}

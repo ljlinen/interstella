@@ -1,0 +1,77 @@
+.secaboutus {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding-inline: clamp(20px, 8vw, 100px);
+    padding-block: clamp(20px, 30vh, 0px) 100px;
+    gap: clamp(20px, 16vh, 130px);
+  }
+
+  .body .column {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 8vw, 100px);
+  }
+
+  .body > :nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 850px) {
+    .body .column {
+      flex-direction: row;
+    }
+  }
+
+  .column p {
+    text-align: justify;
+  }
+
+  .body :last-child {
+
+  }
+
+  .body .text {
+    display: flex;
+    flex-direction: column;
+    width: clamp(300px, calc(54vw - 40px), 418px);
+    width: 100%;
+    gap: 5px;
+  }
+
+  .body .about-us-card {
+    position: relative;
+    border-radius: clamp(30px, 8vw, 85px);
+    background-color: var(--clr-40);
+    max-width: 235px;
+    width: 100%;
+    height: clamp(270px, 57vh, 296px);
+    overflow: hidden;
+    color: var(--clr-60);
+  }
+
+  .body .card-2 {
+    height: clamp(300px, 50vh, 360px);
+  }
+
+  .body .about-us-card img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+    opacity: .6;
+  }
+
+  .column .images {
+    display: flex;
+    gap: 20px;
+    width: clamp(320px, 60vw, 418px);
+    width: 100%;
+  }
+}

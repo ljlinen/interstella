@@ -1,0 +1,68 @@
+  .service-card {
+    position: relative;
+    border-radius: 60px;
+    background-color: var(--clr-40);
+    width: clamp(200px, 10vw, 200px);
+    height: clamp(300px, 10vw, 300px);
+    overflow: hidden;
+    color: var(--clr-60);
+    box-shadow: rgb(0 0 0 / 40%) 0 0 4px 0px;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: .6;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    .top {
+      height: 50px;
+      display: flex;
+      position: absolute;
+      top: 0;
+      padding-top: calc(20px + 6px);
+      padding-right: calc(30px + 6px);
+      right: 0;
+      align-items: center;
+      gap: 2px;
+      transition: transform .3s;
+    }
+
+    .top:hover {
+      transform: translateX(-10px) scale(1.05);
+    }
+
+    .top svg {
+      height: 20px;
+      fill: var(--clr-10);
+    }
+
+    .bottom {
+      position: absolute;
+      background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.8) 70%);
+      width: 100%;
+      padding-inline: 45px;
+      padding-block: 29px;
+      bottom: 0;
+    }
+
+    .bottom h3 {
+      text-overflow: ellipsis;
+      text-wrap: nowrap;
+      color: var(--clr-10);
+    }
+
+    .bottom p {
+      text-overflow: ellipsis;
+      text-wrap: nowrap;
+      color: var(--clr-40-2);
+    }
+  }
+}

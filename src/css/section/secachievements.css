@@ -1,0 +1,93 @@
+.secachievements {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: var(--clr-60);
+  background-color: var(--clr-40);
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding-inline: clamp(20px, 8vw, 100px);
+    padding-block: clamp(20px, 30vh, 0px) 200px;
+  }
+
+  .achievements-count {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+
+  .achievements-count .counts {
+    display: flex;
+    gap: 40px;
+  }
+
+  .counts .count {
+    max-width: 250px;
+  }
+
+  .count h3 {
+    font-size: clamp(2rem, 2.38vw, 3rem);
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .achievement-strategy {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    margin-top: 150px;
+  }
+
+  .achievement-strategy .timeline {
+    position: relative;
+  }
+
+  .timeline .wrap {
+    position: absolute;
+    left: 1px;
+    top: 10px;
+    bottom: 0;
+    height: 96%;
+    width: 2px;
+    background-color: var(--clr-60);
+    border-radius: 2px;
+  }
+
+  .timeline ul {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .timeline ul li::before {
+    display: inline-block;
+    content: "";
+    position: relative;
+    height: 4px;
+    width: 4px;
+    margin-right: 8px;
+    background-color: var(--clr-60);
+    border-radius: 1px;
+  }
+
+  .priorities {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 150px 150px;
+    gap: 30px;
+  }
+
+  .priorities .priority-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+    background-color: var(--clr-40-2);
+    color: var(--clr-60);
+    padding: 20px;
+  }
+}

@@ -4,6 +4,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/interstella/",
   plugins: [react(), svgr({
     // svgr options: https://react-svgr.com/docs/options/
     svgrOptions: { exportType: "default", ref: true, svgo: false, titleProp: true },
@@ -13,5 +14,6 @@ export default defineConfig({
     port: 3000,
     open: true,
     host: '0.0.0.0',
-  }
+  },
+  
 })

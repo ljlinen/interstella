@@ -1,18 +1,6 @@
 @font-face {
-  font-family: logo;
-  src: url('../../asset/fonts/DESIGNER.otf');
-}
-@font-face {
-  font-family: sidebar;
-  src: url('../../asset/fonts/Lexend-Regular.woff2');
-}
-@font-face {
   font-family: body;
   src: url('../../asset/fonts/Ubuntu-Regular.ttf');
-}
-@font-face {
-  font-family: accent;
-  src: url('../../asset/fonts/KGNeatlyPrinted.ttf');
 }
 :root {
   /* font-size: 62.25%; */

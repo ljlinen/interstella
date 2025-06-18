@@ -1,5 +1,5 @@
 {
-  "homepage": "https://interstella.github.io/",
+  "homepage": "https://ljlinen.github.io/interstella/",
   "name": "interstella",
   "private": true,
   "version": "0.0.0",
@@ -13,12 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "@eslint/js": "^9.17.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

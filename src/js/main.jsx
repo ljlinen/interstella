@@ -14,11 +14,11 @@ const routes = [
     children: [{
       path: '/service',
       element: <ServiceOutlet />
-    }]
+    }],
   },
 ]
 
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes, {basename: '/interstella/'})
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 

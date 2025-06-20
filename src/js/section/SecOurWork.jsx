@@ -16,8 +16,8 @@ export default function SecOurWork() {
         <p>Below are some of the services we provide and some of our previous work. Prices may change anytime contact to ensure prices are as shown here on our website.</p>
         <p></p>
       </div>
-      <div className='body'>
-        <div className={`work ${isLocationService ? 'service-is-active' : ''}`}>
+      <div className={`body  ${isLocationService ? 'service-is-active' : ''}`}>
+        <div className={`work`}>
           <div className="scroller">
             {
               data.hairStyles.map((item, i) => {

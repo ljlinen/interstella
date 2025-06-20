@@ -143,110 +143,16 @@ input:hover, .input-button:hover {
   }
 }
 
-  nav {
-    display: flex;
-    width: 100%;
-    padding: 10px 40px;
-    border-bottom: 1px rgba(0, 51, 51, .2) solid;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
+section > .head {
+  display: flex;
+  flex-direction: column;
+  padding-inline: clamp(20px, 8vw, 100px);
+  padding-block: clamp(50px, 10vh, 100px);
+  margin-bottom: 5px;
 
-  nav .left {
-    display: flex;
-    position: relative;
-    flex: 1;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 40px;
+  p {
+    text-align: justify;
+    max-width: clamp(300px, calc(54vw - 40px), 350px);
   }
-
-  nav .left ul {
-    display: none;
-    list-style: none;
-    text-transform: capitalize;
-    gap: 50px;
-    height: 60px;
-    padding-block: 10px;
-    align-items: center;
-    font-weight: 600;
-  }
-
-  @media screen and (min-width: 1000px) {
-    nav .left ul {
-      display: flex;
-    }
-  }
-
-  nav .left .switch {
-
-    width: 50px;
-    height: 26px;
-    padding: 2px;
-    background-color: var(--clr-40);
-    border-radius: 13px;
-    position: absolute;
-    top: calc(60px + 20px + 40px);
-    right: 40px;
-  }
-
-  nav .left .switch .wrap {
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: space-around;
-    height: 100%;
-  }
-
-  nav .left .switch .wrap svg {
-    height: 60%;
-    position: relative;
-    z-index: 2;
-  }
-
-  nav .left .switch .wrap .switch-indicator {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background-color: var(--clr-60);
-    border-radius: 12px;
-    z-index: 1;
-    opacity: 1;
-    transform: translateX(-50%);
-    transition: transform .3s ease-in-out, opacity .3s;
-  }
-  nav .left .switch .wrap .on {
-    
-  }
-
-  nav .left .switch .wrap .off {
-    opacity: .5;
-    transform: translateX(50%);
-  }
-
-  nav .right {
-    display: flex;
-    width: clamp(160px, calc(42vw - 40px), 470px - 40px);
-    justify-content: flex-end;
-  }
-
-  nav .right .button {
-    align-self: flex-end;
-    color: var(--clr-10);
-    text-transform: uppercase;
-  }
-
-  section .head {
-    display: flex;
-    flex-direction: column;
-    padding-inline: clamp(20px, 8vw, 100px);
-    padding-block: clamp(50px, 10vh, 100px);
-    margin-bottom: 5px;
-
-    p {
-      text-align: justify;
-      max-width: clamp(300px, calc(54vw - 40px), 350px);
-    }
-  }
+}
 /* End */

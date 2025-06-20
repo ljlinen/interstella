@@ -43,11 +43,12 @@
   .body {
     padding-inline: clamp(20px, 8vw, 100px);
     padding-block: 100px;
+    height: 454px;
+    transition: height 1.2s ease-in-out;
   }
 
   .body .work {
     display: flex;
-    justify-content: center;
     position: relative;
     width: 100%;
     overflow-x: auto;
@@ -61,7 +62,7 @@
     background-color: var(--clr-40);
   }
 
-  .body .service-is-active {
+  .body.service-is-active .work {
     overflow-x: hidden !important;
   }
 
@@ -76,11 +77,15 @@
     transition: opacity 1s;
   }
 
-  .service-is-active .scroller {
+  .service-is-active {
+    height: 600px !important;
+  }
+
+  .service-is-active .work .scroller {
     opacity: 0 !important;
   }
 
-  .service-is-active + .work-scroll-buttons {
+  .service-is-active .work + .work-scroll-buttons {
     opacity: 0 !important;
   }
 

@@ -1,0 +1,14 @@
+@media screen and (min-width: 512px) {
+
+  header {
+
+    nav .right .buttons > :first-child {
+      display: none;
+    }
+
+    nav .right .buttons > :last-child {
+      display: flex !important;
+    }
+  }
+
+}

@@ -1,5 +1,6 @@
 import '../../css/section/header.css'
 import IconCalendar from '../../asset/icon/calendar.svg'
+import IconMenu from '../../asset/icon/menu.svg'
 import IconLogo from '../../asset/icon/logo.svg'
 import ImgHeaderBackground from '../../asset/icon/IconHeaderBackground.svg'
 import Button from '../element/Button'
@@ -19,7 +20,12 @@ export default function SecHeader() {
           <SwitchButtons />
         </div>
         <div className='right'>
-          <Button text={'Make Appointment'} />
+          <div className="buttons">
+            <Button>
+              <IconMenu />
+            </Button> 
+            <Button text={'Make Appointment'} />      
+          </div>
         </div>
       </nav>
       <div className="header-body">

@@ -1,0 +1,16 @@
+{
+  "name": "rawnodebackend",
+  "version": "1.0.0",
+  "description": "Backend Using VanillaJs/Raw Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "rawnodebackend"
+  },
+  "author": "",
+  "license": "ISC"
+}

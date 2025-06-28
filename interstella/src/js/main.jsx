@@ -6,7 +6,7 @@ import '../css/root/main.css'
 import '../css/root/media-queries.css'
 import Home from './page/Home';
 import ServiceOutlet from './component/ServiceOutlet';
-
+export const ENDPOINT = 'http://localhost:3000'
 const routes = [
   {
     path: '/',
@@ -19,7 +19,6 @@ const routes = [
 ]
 
 const router = createBrowserRouter(routes, {basename: '/interstella/'})
-
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(

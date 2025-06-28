@@ -13,13 +13,12 @@
   }
 
   .achievements-count {
-    display: grid;
-    grid-template-columns: 200px 1fr;
+    
   }
 
   .achievements-count .counts {
     display: flex;
-    gap: 40px;
+    gap: clamp(20px, 2.45vw, 40px);
   }
 
   .counts .count {
@@ -34,7 +33,8 @@
 
   .achievement-strategy {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: clamp(100px, 20vw, 200px) 1fr;
+    gap: 20px;
     margin-top: 150px;
   }
 
@@ -75,9 +75,8 @@
   }
 
   .priorities {
-    display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 150px 150px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
 
@@ -89,5 +88,7 @@
     background-color: var(--clr-40-2);
     color: var(--clr-60);
     padding: 20px;
+    min-height: 150px;
+    max-width: 400px;
   }
 }

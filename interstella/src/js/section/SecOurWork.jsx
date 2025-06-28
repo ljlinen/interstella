@@ -6,9 +6,9 @@ import { Outlet } from 'react-router-dom'
 import useIsLocationService from '../hook/useIsLocationService'
 import useRequestData from '../hook/useRequestData'
 
-export default function SecOurWork() {
+export default function SecOurWork({data}) {
   const isLocationService = useIsLocationService()
-  const data = useRequestData();
+  const { hairStyles } = useRequestData()
   return (
     <section className='secourwork'>
       <div className='head'>
@@ -19,17 +19,23 @@ export default function SecOurWork() {
       <div className={`body  ${isLocationService ? 'service-is-active' : ''}`}>
         <div className={`work`}>
           <div className="scroller">
-            {
-              data.hairStyles.map((item, i) => {
+            { 
+              data ?
+              data.map((item, i) => {
+                data['images'] = hairStyles[i].images
                 return (
                   <ServiceCard key={'service-' + i} cardData={item} />
                 )
-              })
+              }) :
+              <div>
+                <h4>Data Missing</h4>
+                <p>Error loading this page.</p>
+              </div>
             }
           </div>
           <Outlet />
         </div>
-        <div className="work-scroll-buttons">
+        <div className="work-scroll-buttons" style={{display: data ? 'flex' : 'none'}}>
           <Button>
             <IconArrow style={{transform: 'rotate(-90deg)'}} />
           </Button>

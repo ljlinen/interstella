@@ -31,7 +31,6 @@ export default function SecAchievements() {
       </div>
       <div className="body">
         <div className="achievements-count">
-          <div className="wrap"></div>
           <div className="counts">
             <div className="count">
               <h3>1</h3>
@@ -54,7 +53,7 @@ export default function SecAchievements() {
               <li>Confirmation</li>
               <li>Visit</li>
               <li>Session</li>
-              <li>Costumer Feedback</li>
+              <li>Feedback</li>
             </ul>
             <div className="wrap"></div>
           </div>

@@ -6,8 +6,10 @@ import SecAchievements from '../section/SecAchievements.jsx'
 import SecHeader from '../section/SecHeader.jsx'
 import SecFooter from '../section/SecFooter.jsx'
 import '../../css/root/main.css'
+import useRequest from '../hook/useRequest.js'
 
 export default function Home() {
+  const homeDataObj = useRequest();
   return (
     <>
       <ScrollButtons />

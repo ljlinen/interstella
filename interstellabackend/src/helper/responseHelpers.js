@@ -26,14 +26,14 @@ const Created = (res, message = "Created Successfully") => {
   return res.end(resObj);
 }
 
-const NotFound = (res, url) => {
+const NotFound = (res, message) => {
 
   res.writeHead(404, {
     "content-type": "application/json"
   });
   const resObj = JSON.stringify({   
     success: true, 
-    message: `ERROR 404: path: ${url} was not found`
+    message: `ERROR 404: ${message}`
   });
 
   return res.end(resObj);

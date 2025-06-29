@@ -1,8 +1,11 @@
-# LinenReactStarterTemplate
+# Interstella Fullstack Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## About Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A Javacript fullstack website for a local hir alon business. Using react on the frontend and node on the backend. The backend uses raw nodejs with no framework.                                                                                                                       
+
+## License
+This project is proprietary nd not open source.
+See the full license
+- [Here](https://github.com/ljlinen/src/licenses/LICENSE.txt)

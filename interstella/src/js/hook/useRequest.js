@@ -11,10 +11,9 @@ export default function useRequest() {
         await request.json() :
         null
         if(!result) throw new Error('requet failed, check your network');
-        setObject(result);
+        setObject(result?.data);
       } catch (error) {
         console.log(error);
-        throw new Error(error.meage);
       }
     }
     FetchObject()

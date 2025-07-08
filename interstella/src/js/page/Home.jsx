@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <ScrollButtons />
       <SecHeader />
-      <SecOurWork />
+      <SecOurWork data={homeDataObj?.hair} />
       <SecAchievements />
       <SecAboutUs />
       <SecAppointments />

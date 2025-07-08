@@ -1,6 +1,10 @@
 import '../../css/section/secappointments.css'
+import useAppointments from '../hook/useAppointments'
 
 export default function SecAppointments() {
+
+  const { Appointment, response, mode, setMode } = useAppointments()
+
   return (
     <section className='secappointments'>
       <div className="head">
@@ -25,28 +29,7 @@ export default function SecAppointments() {
             </li>
           </ul>
         </div>
-        <form action="submit" method="post">
-          <h5>Book Appointment</h5>
-          <div className="inputs">
-            <div>
-              <label htmlFor="name">Name:</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label htmlFor="date">Appointment Date:</label>
-              <input type="date" />
-            </div>
-            <div>
-              <label htmlFor="Phone">Phone</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label htmlFor="">Email: <span style={{fontStyle: 'italic', opacity: .6}}>Optional</span></label>
-              <input type="email" placeholder='' />
-            </div>
-          </div>
-          <input type="submit" value="Book Appointment" />
-        </form>
+        <AppointmentsForm />
       </div>
     </section>
   )

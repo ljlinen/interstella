@@ -48,6 +48,7 @@
 
   .body {
     display: flex;
+    flex-direction: column-reverse;
     padding-inline: 0;
     gap: clamp(20px, 8vw, 100px);
     margin-top: 50px;
@@ -117,6 +118,11 @@
     object-fit: cover;
     z-index: 0;
     opacity: .6;
+    transition: opacity .1s;
+  }
+
+  .images img.hide {
+    opacity: 0;
   }
 
   .next-buttons {
@@ -135,6 +141,13 @@
       border-radius: 60px;
       height: 42px;
       padding: 10px;
+      opacity: 1;
+      transition: opacity .4s;
+    }
+
+    .button.hide {
+      opacity: 0;
+      pointer-events: none;
     }
 
     svg {

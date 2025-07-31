@@ -1,7 +1,6 @@
 @media screen and (min-width: 512px) {
 
   header {
-
     nav .right .buttons > :first-child {
       display: none;
     }
@@ -11,4 +10,19 @@
     }
   }
 
+  .page-scroll-buttons {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .secourwork {
+    .body {
+      flex-direction: row !important;
+      height: 600px !important;
+    }
+    .serviceoutlet-active {
+      height: 600px !important;
+    }
+  }
 }

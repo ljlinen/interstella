@@ -2,7 +2,7 @@
   "services": {
     "hair": [
       {
-        "name": "Carlos Frontal",
+        "name": "HairStyle One",
         "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
         "properties": [
           [
@@ -18,15 +18,10 @@
             "4 Hours"
           ]
         ],
-        "price": "620",
-        "images": [
-          "img-id",
-          "img-id",
-          "img-id"
-        ]
+        "price": "620"
       },
       {
-        "name": "Gumbaya Relax",
+        "name": "HairStyle Two",
         "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
         "properties": [
           [
@@ -42,12 +37,102 @@
             "4 Hours"
           ]
         ],
-        "price": "620",
-        "images": [
-          "img-id",
-          "img-id",
-          "img-id"
-        ]
+        "price": "620"
+      },
+      {
+        "name": "HairStyle Three",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "properties": [
+          [
+            "Length",
+            "9cm - 16cm"
+          ],
+          [
+            "Available Colors",
+            "Blue, Black"
+          ],
+          [
+            "Average Sitting Time",
+            "4 Hours"
+          ]
+        ],
+        "price": "620"
+      },
+      {
+        "name": "HairStyle Four",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "properties": [
+          [
+            "Length",
+            "9cm - 16cm"
+          ],
+          [
+            "Available Colors",
+            "Blue, Black"
+          ],
+          [
+            "Average Sitting Time",
+            "4 Hours"
+          ]
+        ],
+        "price": "620"
+      },
+      {
+        "name": "HairStyle Five",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "properties": [
+          [
+            "Length",
+            "9cm - 16cm"
+          ],
+          [
+            "Available Colors",
+            "Blue, Black"
+          ],
+          [
+            "Average Sitting Time",
+            "4 Hours"
+          ]
+        ],
+        "price": "620"
+      },
+      {
+        "name": "HairStyle Six",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "properties": [
+          [
+            "Length",
+            "9cm - 16cm"
+          ],
+          [
+            "Available Colors",
+            "Blue, Black"
+          ],
+          [
+            "Average Sitting Time",
+            "4 Hours"
+          ]
+        ],
+        "price": "620"
+      },
+      {
+        "name": "HairStyle Seven",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "properties": [
+          [
+            "Length",
+            "9cm - 16cm"
+          ],
+          [
+            "Available Colors",
+            "Blue, Black"
+          ],
+          [
+            "Average Sitting Time",
+            "4 Hours"
+          ]
+        ],
+        "price": "620"
       }
     ]
   }

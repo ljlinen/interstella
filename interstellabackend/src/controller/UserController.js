@@ -47,9 +47,9 @@ const GetAppointment = async (req, res) => {
 
   try {
     const params = req.url.split('/');
-    const id = params[2];
-    if (id) {
-      const appointment = await userService.FetchAppointment(id)
+    const phone = params[2];
+    if (phone) {
+      const appointment = await userService.FetchAppointment(phone)
 
       if(appointment) {
         Response(res, 200, true, appointment)
@@ -57,7 +57,7 @@ const GetAppointment = async (req, res) => {
         Response(res, 404, false, 'appointment not found in database')
       }
     } else {
-      Response(res, 400, false, 'id missing, provide id')
+      Response(res, 400, false, 'phone missing, provide phone')
     }
   } catch (error) {
     Response(res, 500, false, error.message)

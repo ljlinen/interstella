@@ -1,15 +1,18 @@
 const Response = (res, status, success, body) => {
+  res.statusCode = status;
 
-  res.writeHead(status, {
-    "content-type": "application/json",
-    "Access-Control-Allow-Origin": "*"
-  });
+  res.setHeader("Content-Type", "application/json");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  const resObj = (typeof body === 'string') ?
-  JSON.stringify({ success, message: body }) :
-  JSON.stringify({ success, data: body })
+  const resObj = JSON.stringify(
+    typeof body === 'string'
+      ? { success, message: body }
+      : { success, data: body }
+  );
 
-  return res.end(resObj);
-}
+  res.end(resObj);
+};
 
-module.exports = Response
+module.exports = Response;

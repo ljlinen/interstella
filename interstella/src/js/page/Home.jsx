@@ -12,7 +12,7 @@ export default function Home() {
   const homeDataObj = useRequest();
   return (
     <>
-      <ScrollButtons />
+      {/* <ScrollButtons /> */}
       <SecHeader />
       <SecOurWork data={homeDataObj?.hair} />
       <SecAchievements />

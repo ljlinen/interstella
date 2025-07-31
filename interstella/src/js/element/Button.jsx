@@ -1,6 +1,6 @@
-export default function Button({mainStyle, iconStyle, inputStyle, text, children, animate, callback}) {
+export default function Button({mainStyle, classes, inputStyle, text, children, animate, callback}) {
   return (
-    <div className={`button ${animate ? 'def-anim' : ''}`} style={mainStyle}>
+    <div className={`button ${classes ? classes : ''} ${animate ? 'def-anim' : ''}`} style={mainStyle}>
       {
         text ?
         <p>{text}</p> :

@@ -5,6 +5,8 @@ const Response = require('../utils/responseUtils');
 
 
 const UserRouter = async (req, res) => {
+  console.log(req.method);
+  
   try {
       if (req.url === '/' && req.method === 'GET') {
         GetHomeData(req, res)    
@@ -20,6 +22,8 @@ const UserRouter = async (req, res) => {
         CancelAppointment(req, res);
       } else if (req.url.startsWith('/appointments/') && req.method === 'GET') {
         GetAppointment(req, res);
+      } else if (req.method === 'OPTIONS') {
+        Response(res, 204, false, 'ok');
       } else {
         Response(res, 404, false, 'route or method not found');
       }

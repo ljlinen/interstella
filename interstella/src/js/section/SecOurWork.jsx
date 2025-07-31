@@ -5,10 +5,30 @@ import ServiceCard from '../component/ServiceCard'
 import { Outlet } from 'react-router-dom'
 import useIsLocationService from '../hook/useIsLocationService'
 import useRequestData from '../hook/useRequestData'
+import useScrollButtons from '../hook/useScrollButtons'
+import { useEffect, useState } from 'react'
 
 export default function SecOurWork({data}) {
+
   const isLocationService = useIsLocationService()
+
+  const [prevPosition, setPrevPosition] = useState(0)
+
   const { hairStyles } = useRequestData()
+  const { Scroll, refContainer } = useScrollButtons('x', .5)
+
+
+  useEffect(() => {
+    const elem = refContainer.current
+    if(elem) {
+      setPrevPosition(elem.scrollLeft)
+      isLocationService ?
+      elem.scrollTo({ left: prevPosition }) :
+      elem.scrollTo({ left: 0 })
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLocationService, refContainer])
+
   return (
     <section className='secourwork'>
       <div className='head'>
@@ -17,12 +37,12 @@ export default function SecOurWork({data}) {
         <p></p>
       </div>
       <div className={`body  ${isLocationService ? 'service-is-active' : ''}`}>
-        <div className={`work`}>
+        <div ref={refContainer} className={`work`}>
           <div className="scroller">
             { 
               data ?
               data.map((item, i) => {
-                data['images'] = hairStyles[i].images
+                item['images'] = hairStyles[i].images
                 return (
                   <ServiceCard key={'service-' + i} cardData={item} />
                 )
@@ -36,10 +56,10 @@ export default function SecOurWork({data}) {
           <Outlet />
         </div>
         <div className="work-scroll-buttons" style={{display: data ? 'flex' : 'none'}}>
-          <Button>
+          <Button callback={() => Scroll(false)}>
             <IconArrow style={{transform: 'rotate(-90deg)'}} />
           </Button>
-          <Button>
+          <Button callback={() => Scroll(true)}>
             <IconArrow style={{transform: 'rotate(90deg)'}} />
           </Button>
         </div>

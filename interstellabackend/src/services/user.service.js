@@ -16,14 +16,14 @@ const SaveAppointment = async (appointmentData) => {
     await fileUtils.writeToFile(databasePath, dataObject)
 }
 
-const FetchAppointment = async (id) => {
+const FetchAppointment = async (phone) => {
     const dataObject = await fileUtils.readFromFile(databasePath)
 
     if(!dataObject?.appointments) {
       throw new Error('appointments seem to be mising.')
     }
 
-    const appointment = dataObject?.appointments?.find(item => item?.id === id)
+    const appointment = dataObject?.appointments?.find(item => item?.phone === phone)
     return appointment
 }
 

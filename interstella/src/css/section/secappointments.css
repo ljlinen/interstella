@@ -11,6 +11,7 @@
     justify-content: space-between;
     padding-inline: clamp(20px, 8vw, 100px);
     padding-block: clamp(20px, 30vh, 0px) 200px;
+    min-height: 657px;
   }
 
   @media screen and (min-width: 900px) {
@@ -42,20 +43,85 @@
     padding-bottom: 6px;
   }
 
-  form {
-    max-width: 300px;
+  .forms {
     background-color: var(--clr-40);
     color: var(--clr-60);
-    margin-right: clamp(20px, 8vw, 100px);
-    border-radius: 20px;
-    padding: 40px;
+    border-radius: 30px;   
+    margin-right: clamp(20px, 8vw, 100px); 
+    height: fit-content;
+  }
+
+  
+  .forms .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .forms .tabs .head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .forms .tabs > p {
+    padding-inline: 25px;
+    color: hsl(0 100% 80% / 1);
+    font-weight: 500;
+  }
+
+  .forms .tabs .head h5 {
+    background-color: var(--clr-6055);
+    padding: 25px;
+    /* text-wrap: nowrap; */
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+  }
+
+  .forms .tabs .head > :not(.active) {
+    color: var(--clr-40-2);    
+    opacity: .5;
+    cursor: pointer;
+  }
+
+  .forms .wrap {
+    position: relative;
+    transition: height .8s ease-in-out
+
+  }
+
+  form {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    transition: opacity .2s .8s ease-in-out;
+    padding-bottom: 40px;
+    padding-inline: 25px;
+  }
+
+  .form-create {
+    height: 340px;
+  }
+
+  .form-fetch {
+    height: 160px;
+  }
+
+  .info {
+    padding-inline: 50px;
+    padding-bottom: 50px;
+    color: var(--clr-10);
+  }
+
+  .form-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease-in-out;
   }
 
   form .inputs {
     display: flex;
     margin-top: 25px;
     flex-direction: column;
-    gap: 28px;
+    gap: 40px;
     width: 100%;
   }
 
@@ -63,25 +129,28 @@
     position: relative;
     display: flex;
     width: 100%;
-    opacity: .7;
+  }
+
+  form .inputs > div label {
+    font-weight: 600;
   }
 
   form .inputs input {
     position: absolute;
     left: 0;
     right: 0;
-    margin-top: 7px;
+    margin-top: 22px;
     background-color: transparent;
     border-bottom: 1px var(--clr-60) solid;
     color: inherit;
   }
 
-  form input[type="submit"] {
+  form input[type="button"] {
     display: flex;
     width: 100%;
     position: relative;
     height: 40px;
-    margin-top: 40px;
+    margin-top: 50px;
     padding-inline: 14px;
     align-items: center;
     background-color: var(--clr-60);

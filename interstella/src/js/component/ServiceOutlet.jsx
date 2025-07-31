@@ -3,20 +3,34 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import '../../css/section/serviceoutlet.css'
 import IconArrow from '../../asset/icon/chevron-up.svg'
 import Button from '../element/Button'
-import imgService from '../../asset/img/style (7).jpg'
 import useIsLocationService from '../hook/useIsLocationService'
 
 export default function ServiceOutlet() {
   const [cardData, setCardData] = useState()
+  const [ImgCurrent, setImgCurrent] = useState()
+  const [hideTransition, setHideTransition] = useState()
+  const [ImgCurrentIndex, setImgCurrentIndex] = useState(0)
 
   const location = useLocation()
   const active = useIsLocationService()
   const navigate = useNavigate()
+
   useEffect(() => {
     setCardData(location?.state?.cardData)
-    console.log(cardData);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.state])
+  }, [cardData, location?.state])
+
+  useEffect(() => {
+    if(cardData?.images && (ImgCurrentIndex < cardData.images.length)) {
+      setHideTransition(true)
+      setTimeout(() => {
+        setImgCurrent(cardData.images[ImgCurrentIndex])
+      }, [200])
+      setTimeout(() => {
+        setHideTransition(false)
+      }, [200])
+    }
+  }, [ImgCurrentIndex, cardData?.images])
+
   return (
     <div className={`serviceoutlet ${active ? 'serviceoutlet-active' : ''}`}>
       {
@@ -61,12 +75,14 @@ export default function ServiceOutlet() {
             </div>
           </div>
           <div className='images'>
-            <img src={cardData?.images?.length && cardData?.images[0]} />
-            <div className="next-buttons">
-              <Button>
+            <img className={hideTransition ? 'hide' : ''} src={ImgCurrent} />
+            <div className={`next-buttons`} style={{ displey: cardData?.images?.length ? 'flex' : 'none' }}>
+              <Button classes={(ImgCurrentIndex - 1) < 0 ? 'hide' : ''} 
+                callback={() => setImgCurrentIndex(ImgCurrentIndex - 1)}>
                 <IconArrow style={{transform: 'rotate(-90deg)'}} />
               </Button>
-              <Button>
+              <Button classes={(ImgCurrentIndex + 1) > cardData?.images?.length ? 'hide' : ''} 
+              callback={() => setImgCurrentIndex(ImgCurrentIndex + 1)}>
                 <IconArrow style={{transform: 'rotate(90deg)'}} />
               </Button>
             </div>

@@ -4,11 +4,11 @@
 }
 :root {
   /* font-size: 62.25%; */
-  --clr-60: rgb(0, 255, 255);
-  --clr-40: rgb(0, 51, 51);
-  --clr-40-2: rgb(0 152 153);
-  --clr-10: rgb(255, 255, 204);
-  --clr-fff: #fff;
+  --clr-60: hsl(180, 100%, 50%);
+  --clr-40: hsl(180, 100%, 10%);
+  --clr-40-2: hsl(180, 100%, 15%);
+  --clr-10: hsl(60, 100%, 90%);
+  --clr-fff: hsl(0, 0%, 100%);
   --unit: 1.618;
 }
 html {
@@ -119,7 +119,7 @@ input:hover, .input-button:hover {
 }
 
 .page-scroll-buttons {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: fixed;
   height: 100vh;
@@ -151,7 +151,7 @@ section > .head {
   margin-bottom: 5px;
 
   p {
-    text-align: justify;
+    /* text-align: justify; */
     max-width: clamp(300px, calc(54vw - 40px), 350px);
   }
 }

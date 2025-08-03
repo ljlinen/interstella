@@ -1,29 +1,38 @@
 footer {
-  position: relative;
-  z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding-block: clamp(50px, 10vh, 100px);
+        padding-inline: clamp(20px, 8vw, 100px);
   overflow: hidden;
   background-color: var(--clr-40);
   color: var(--clr-60);
 
-  .body {
+  .sf-body {
     display: flex;
     flex-direction: column;
-    row-gap: 80px;
-    justify-content: space-between;
-    padding-inline: clamp(20px, 8vw, 100px);
-    padding-block: clamp(20px, 30vh, 0px) 100px;
+    margin-top: clamp(20px, 4vw, 60px);
+    gap: 10px;
   }
 
-  .head {
+  .sf-sub-body {
     display: flex;
     flex-direction: column;
-    padding-inline: clamp(20px, 8vw, 100px);
-    padding-block: clamp(50px, 10vh, 100px);
+  }
 
-    p {
-      margin-top: 5px;
-      text-align: justify;
-      max-width: clamp(300px, calc(54vw - 40px), 350px);
-    }
+  .sf-sub-body > div {
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .sf-sub-body h3 {
+    margin-bottom: 10px;
+  }
+
+  .sf-sub-body > div svg {
+    width: 100%;
+    height: 22px;
+    color: var(--clr-10);
   }
 }

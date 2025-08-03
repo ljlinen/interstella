@@ -1,4 +1,12 @@
 @media screen and (min-width: 512px) {
+  
+  /* GLOBAL */
+
+  .page-scroll-buttons {
+    display: flex;
+  }
+
+  /* HEADER QUERIES */
 
   header {
     nav .right .buttons > :first-child {
@@ -10,19 +18,32 @@
     }
   }
 
-  .page-scroll-buttons {
-    display: flex;
+  /* SERVICES QUERIES */
+
+  .secourwork {
+
   }
+
+
 }
 
 @media screen and (min-width: 800px) {
   .secourwork {
-    .body {
+    .serviceoutlet .body {
       flex-direction: row !important;
-      height: 600px !important;
+      height: 900px !important;
     }
+
     .serviceoutlet-active {
       height: 600px !important;
     }
+
+    .serviceoutlet .body .images {
+      max-width: 600px;
+    }
+
+  .body.service-is-active {
+    height: 830px !important;
+  }
   }
 }

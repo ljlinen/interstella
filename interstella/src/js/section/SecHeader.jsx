@@ -5,6 +5,7 @@ import IconLogo from '../../asset/icon/logo.svg'
 import ImgHeaderBackground from '../../asset/icon/IconHeaderBackground.svg'
 import Button from '../element/Button'
 import SwitchButtons from '../component/SwitchButtons'
+import ScrollToElement from '../../utils/ScrollToElemet'
 
 export default function SecHeader() {
   return (
@@ -13,9 +14,9 @@ export default function SecHeader() {
         <div className='left'>
           <IconLogo width="150" />
           <ul>
-            <li>about</li>
-            <li>gallery</li>
-            <li>contact</li>
+            <li onClick={() => ScrollToElement('.secachievements')}>about</li>
+            <li onClick={() => ScrollToElement('.secourwork')}>gallery</li>
+            <li onClick={() => ScrollToElement('footer')}>contact</li>
           </ul>
           <SwitchButtons />
         </div>
@@ -24,7 +25,7 @@ export default function SecHeader() {
             <Button>
               <IconMenu />
             </Button> 
-            <Button text={'Make Appointment'} />      
+            <Button text={'Make Appointment'} callback={() => ScrollToElement('.secappointments')} />      
           </div>
         </div>
       </nav>
@@ -32,7 +33,7 @@ export default function SecHeader() {
         <h1>Interstella Hair and Nail Salon</h1>
         <p>A 4 stars salon located in KwaMhlanga, Phola Mall 4-ways We specialise in everything beauty, from eyebrows, nails all the way to frontal installation and skin care. <span>learn more</span></p>
         <div className="call-to-action">
-          <Button text={'make appointment'} animate={true}>
+          <Button text={'make appointment'} animate={true} callback={() => ScrollToElement('.secappointments')}>
             <IconCalendar />
           </Button>
           <Button>

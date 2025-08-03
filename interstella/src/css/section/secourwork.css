@@ -43,8 +43,11 @@
   .body {
     padding-inline: clamp(20px, 8vw, 100px);
     padding-block: 100px;
-    height: 454px;
-    transition: height 1.2s ease-in-out;
+    transition: height 1.2s var(--anim-cubic);
+  }
+
+  .body.service-is-active {
+    height: 1100px;
   }
 
   .body .work {
@@ -53,6 +56,7 @@
     width: 100%;
     overflow-x: auto;
     scroll-behavior: smooth;
+    /* min-height: 600px; */
   }
 
   .body .work::-webkit-scrollbar {
@@ -65,6 +69,7 @@
 
   .body.service-is-active .work {
     overflow-x: hidden !important;
+    height: 100%;
   }
 
   .body .work .scroller {
@@ -78,9 +83,6 @@
     transition: opacity 1s;
   }
 
-  .service-is-active {
-    height: 1000px !important;
-  }
 
   .service-is-active .work .scroller {
     opacity: 0 !important;

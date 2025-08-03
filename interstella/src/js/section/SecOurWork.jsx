@@ -8,26 +8,34 @@ import useRequestData from '../hook/useRequestData'
 import useScrollButtons from '../hook/useScrollButtons'
 import { useEffect, useState } from 'react'
 
-export default function SecOurWork({data}) {
+export default function SecOurWork({ data }) {
 
+  
   const isLocationService = useIsLocationService()
-
   const [prevPosition, setPrevPosition] = useState(0)
 
   const { hairStyles } = useRequestData()
   const { Scroll, refContainer } = useScrollButtons('x', .5)
 
 
+  /**
+   * Resets The Container's ScrollX To Position 0
+   * Why: The Container is a parent to two chrildren that depend on the scroll position
+   * reseting container's scrollx allows the hidden child to begin at scrollX:0 when toggled active
+   */
+
   useEffect(() => {
     const elem = refContainer.current
+    
     if(elem) {
       setPrevPosition(elem.scrollLeft)
       isLocationService ?
-      elem.scrollTo({ left: prevPosition }) :
-      elem.scrollTo({ left: 0 })
+      elem.scrollTo({ left: 0 }) :
+      elem.scrollTo({ left: prevPosition })
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLocationService, refContainer])
+
 
   return (
     <section className='secourwork'>

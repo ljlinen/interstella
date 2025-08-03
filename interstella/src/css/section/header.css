@@ -154,6 +154,7 @@ header {
 
   .header-body .call-to-action :first-child {
     max-width: fit-content;
+    text-transform: capitalize;
     gap: 1rem;
   }
 
@@ -169,6 +170,16 @@ header {
     list-style: disc !important;
     margin-left: 10px;
     font-size: clamp(10px, .8vw, 13px);
+  }
+
+  .header-body .call-to-action > :last-child {
+    background-color: var(--clr-60);
+    color: var(--clr-40);
+    box-shadow: rgb(0 0 0 / 10%) 0 0 20px;
+  } 
+
+  .header-body .call-to-action > :last-child input {
+    cursor: copy;
   }
 }
 

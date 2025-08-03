@@ -1,11 +1,11 @@
-# Interstella Fullstack Website
+# Interstella Fullstack Website - Portfolio & Appointment Booking
 
 
 ## About Project
 
-A Javacript fullstack website for a local hir alon business. Using react on the frontend and node on the backend. The backend uses raw nodejs with no framework.                                                                                                                       
+A React + NodeJs fullstack website for a local hair salon business. Using react on the frontend and vanilla node on the backend.                                                                                                                       
 
 ## License
-This project is proprietary nd not open source.
+This project is proprietary and not open source.
 See the full license
-- [Here](https://github.com/ljlinen/src/licenses/LICENSE.txt)
+- [View License](https://github.com/ljlinen/src/licenses/LICENSE.txt)

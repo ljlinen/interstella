@@ -9,14 +9,14 @@
   --clr-40-2: hsl(180, 100%, 15%);
   --clr-10: hsl(60, 100%, 90%);
   --clr-fff: hsl(0, 0%, 100%);
-  --unit: 1.618;
+  --anim-cubic: cubic-bezier(0.13, 0.23, 0.3, 0.98);
 }
 html {
   scroll-behavior: smooth;
   font-size: 62.25%;
 }
 #root {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr min(100%, 1280px) 1fr;
   background: linear-gradient(to right, #ffff, #00CCCC);
 }
@@ -100,6 +100,7 @@ input:hover, .input-button:hover {
   }
 
   input {
+    cursor: pointer;
     position: absolute;
     inset: 0;
     opacity: 0;

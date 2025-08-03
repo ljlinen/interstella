@@ -11,8 +11,8 @@
   .text {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    height: 100%;
+    width: 100%;
+    margin-top: clamp(20px, 8vw, 100px);
   }
 
   .head {
@@ -31,6 +31,7 @@
 
   .head .wrap h5 {
     text-wrap: nowrap;
+    margin-bottom: unset;
   }
 
   .head .wrap .button {
@@ -51,7 +52,6 @@
     flex-direction: column-reverse;
     padding-inline: 0;
     gap: clamp(20px, 8vw, 100px);
-    margin-top: 50px;
     padding-block: 0;
   }
 
@@ -64,8 +64,12 @@
   }
 
   .text .appointment {
-    margin-top: 14px !important;
+    margin-top: 30px !important;
     flex-direction: column;
+  }
+
+  .appointment h5 {
+    margin-bottom: 5px !important;
   }
 
   .text .cost {
@@ -75,11 +79,7 @@
     align-items: center;
   }
 
-  .text .wrap {
-    margin-top: 30px;
-  }
-
-  .text .wrap h5 {
+  .wrap h5 {
     margin-bottom: 14px;
   }
 
@@ -89,7 +89,8 @@
     align-items: center;
     width: 100%;
     margin-top: 7px;
-    padding-left: 15px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid hsla(180, 100%, 15%, 0.40);
   }
 
   .button {
@@ -103,12 +104,13 @@
 
   .images {
     position: relative;
-    border-radius: 85px;
+    border-radius: 50px;
     background-color: var(--clr-40);
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    min-height: 400px;
     overflow: hidden;
     color: var(--clr-60);
+    margin-top: clamp(20px, 8vw, 100px);
   }
 
   .images img {
@@ -137,10 +139,11 @@
     padding-inline: 20px;
 
     .button {
+      background-color: var(--clr-60);
       width: fit-content;
       border-radius: 60px;
-      height: 42px;
-      padding: 10px;
+      height: 32px;
+      padding: 5px;
       opacity: 1;
       transition: opacity .4s;
     }
@@ -151,8 +154,8 @@
     }
 
     svg {
-      width: 22px;
-      fill: var(--clr-60);
+      width: 32px;
+      color: var(--clr-40);
     }
   }
 }

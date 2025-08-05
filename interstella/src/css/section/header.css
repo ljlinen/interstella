@@ -175,7 +175,7 @@ header {
   .header-body .call-to-action > :last-child {
     background-color: var(--clr-60);
     color: var(--clr-40);
-    box-shadow: rgb(0 0 0 / 10%) 0 0 20px;
+    box-shadow: rgb(0 0 0 / 40%) 0 0 4px;
   } 
 
   .header-body .call-to-action > :last-child input {

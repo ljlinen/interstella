@@ -40,9 +40,8 @@ export default function SecOurWork({ data }) {
   return (
     <section className='secourwork'>
       <div className='head'>
-        <h2>03 Some of our work</h2>
-        <p>Below are some of the services we provide and some of our previous work. Prices may change anytime contact to ensure prices are as shown here on our website.</p>
-        <p></p>
+        <h2>02 Our Work & Services</h2>
+        <p>Take a look at some of our signature styles and client transformations. We update our lookbook often, so keep checking in for the latest inspiration.</p>
       </div>
       <div className={`body  ${isLocationService ? 'service-is-active' : ''}`}>
         <div ref={refContainer} className={`work`}>

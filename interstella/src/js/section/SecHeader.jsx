@@ -25,15 +25,15 @@ export default function SecHeader() {
             <Button>
               <IconMenu />
             </Button> 
-            <Button text={'Make Appointment'} callback={() => ScrollToElement('.secappointments')} />      
+            <Button text={'Schedule Appointment'} callback={() => ScrollToElement('.secappointments')} />      
           </div>
         </div>
       </nav>
       <div className="header-body">
-        <h1>Interstella Hair and Nail Salon</h1>
-        <p>A 4 stars salon located in KwaMhlanga, Phola Mall 4-ways We specialise in everything beauty, from eyebrows, nails all the way to frontal installation and skin care. <span>learn more</span></p>
+        <h1>Feel Amazing. Look Stunning. Leave Radiant.</h1>
+        <p>Interstella is your go-to beauty studio for hair, nails, and glow-up essentials. Whether you&apos;re prepping for an event or just need some well-earned self-care.<span>learn more</span></p>
         <div className="call-to-action">
-          <Button text={'make appointment'} animate={true} callback={() => ScrollToElement('.secappointments')}>
+          <Button text={'Schedule Appointment'} animate={true} callback={() => ScrollToElement('.secappointments')}>
             <IconCalendar />
           </Button>
           <Button>

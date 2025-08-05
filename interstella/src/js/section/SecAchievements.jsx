@@ -5,20 +5,20 @@ export default function SecAchievements() {
 
   const priorities = [
     {
-      priority: "costumer satisfaction",
-      description: "At our salon we prioritise our customer's satisfaction. We believe that costumer's hapinnes means more than profit in the long run."
+      priority: "Tailored Experience",
+      description: "No two clients are the same. We customize every session to suit your unique style and needs."
     },
     {
-      priority: "positive feedback",
-      description: "At our salon we prioritise our customer's satisfaction. We believe that costumer's hapinnes means more than profit in the long run."
+      priority: "Professional Team",
+      description: "Our team is qualified, friendly, and always up to date with the latest techniques and trends."
     },
     {
-      priority: "returning costumer cont",
-      description: "At our salon we prioritise our customer's satisfaction. We believe that costumer's hapinnes means more than profit in the long run."
+      priority: "Premium Products",
+      description: "We only use salon-grade, skin- and hair-safe products from trusted brands."
     },
     {
-      priority: "affordability",
-      description: "At our salon we prioritise our customer's satisfaction. We believe that costumer's hapinnes means more than profit in the long run."
+      priority: "Real Results",
+      description: "Our work speaks for itself. Consistently glowing reviews and loyal returning clients."
     }
   ]
 
@@ -26,34 +26,33 @@ export default function SecAchievements() {
   return (
     <section className='secachievements'>
       <div className="head">
-        <h2>03 Why Choos Us</h2>
-        <p>we have we a working service delivery method while at the same time highly prioritising our customer’s satisfaction.</p>
+        <h2>03. Why Interstella?</h2>
+        <p>Beauty is more than just appearance — it’s how you feel walking out.</p>
       </div>
       <div className="body">
         <div className="achievements-count">
           <div className="counts">
             <div className="count">
-              <h3>1</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, enim.</p>
+              <h3>1.</h3>
+              <p>We’re known for our consistency and attention to detail in every session.</p>
             </div>
             <div className="count">
-              <h3>2</h3>
-              <p>Optio maxime iste sit id expedita deleniti? Illum, cumque dolorem.</p>
+              <h3>2.</h3>
+              <p>Clients appreciate the smooth booking process and welcoming environment.</p>
             </div>
             <div className="count">
-              <h3>3</h3>
-              <p>Inventore est quisquam alias magni quidem laudantium aspernatur voluptate.</p>
+              <h3>3.</h3>
+              <p>Our team is passionate, skilled, and always up-to-date with the latest trends.</p>
             </div>
           </div>
         </div>
         <div className="achievement-strategy">
           <div className="timeline">
             <ul>
-              <li>Appointment</li>
-              <li>Confirmation</li>
-              <li>Visit</li>
-              <li>Session</li>
-              <li>Feedback</li>
+              <li>Consult.</li>
+              <li>Care.</li>
+              <li>Create.</li>
+              <li>Confidence.</li>
             </ul>
             <div className="wrap"></div>
           </div>

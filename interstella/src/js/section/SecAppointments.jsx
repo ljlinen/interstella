@@ -45,7 +45,6 @@ export default function SecAppointments() {
                 <h5 className={useAppoiObj.mode.create ? 'active' : ''} onClick={() => useAppoiObj.setMode({create: true})}>Make An Appointment</h5>
                 <h5 className={useAppoiObj.mode.fetch ? 'active' : ''} onClick={() => useAppoiObj.setMode({fetch: true})}>Check An Appointment</h5>
               </>
-
             }               
             </div>
             <p>{useAppoiObj.mode?.info && (useAppoiObj?.mode?.create || useAppoiObj?.mode?.fetch) ? useAppoiObj.response?.message : '' }</p>

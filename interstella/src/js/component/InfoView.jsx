@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 
 export default function InfoView({ useAppoiObj }) {
 
@@ -7,8 +6,9 @@ export default function InfoView({ useAppoiObj }) {
       {
         useAppoiObj?.response?.data ?
         Object.entries(useAppoiObj.response.data).map(([key, value], i) => {
-          <div key={i}>
-            <h3>{key}</h3>
+          if(key === 'id') return null
+          return <div key={'info' + i}>
+            <h3>{key}:</h3>
             <p>{value}</p>
           </div>
         }) :

@@ -42,7 +42,7 @@ export default function ServiceOutlet() {
               </Button>
               <h5>{cardData?.name}</h5>
             </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt harum quos necessitatibus, magnam quas velit temporibus inventore labore quis nam tenetur earum in cumque molestiae explicabo voluptas reiciendis itaque unde nisi. Obcaecati esse, modi nobis odio animi pariatur minus!</p>
+          <p>{cardData?.description}</p>
         </div> : null
       }
       {

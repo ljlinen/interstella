@@ -8,7 +8,7 @@
     flex-direction: column;
     padding-inline: clamp(20px, 8vw, 100px);
     padding-block: clamp(20px, 30vh, 0px) 100px;
-    gap: clamp(20px, 16vh, 130px);
+    gap: clamp(20px, 8vw, 100px);
   }
 
   .body .column {

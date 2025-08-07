@@ -64,7 +64,8 @@
   }
   .body .work::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: var(--clr-40);
+    background-color: transparent;
+    opacity: 0 !important;
   }
 
   .body.service-is-active .work {
@@ -97,7 +98,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 66%;
+    top: 55.5%;
     opacity: 1;
     padding-inline: clamp(20px, 3vw, 30px);
     align-items: center;
@@ -107,13 +108,18 @@
     
 
     .button {
+      opacity: 1;
       border-radius: 30px;
       height: fit-content;
       padding: 5px;
       border: 2px solid transparent;
       background-color: transparent;
       color: var(--clr-40);
-      transition: border .4s, border-radius .4s;
+      transition: border .4s, border-radius .4s, opacity .4s;
+    }
+
+    .button.hide {
+      opacity: 0;
     }
 
     .button:hover {

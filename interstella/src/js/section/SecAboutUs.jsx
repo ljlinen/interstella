@@ -1,6 +1,8 @@
 import '../../css/section/secaboutus.css'
-import imgService from '../../asset/img/style (3).jpg'
-import imgService2 from '../../asset/img/style (1).jpg'
+import imgService from '../../asset/img/style (12).jpg'
+import imgService2 from '../../asset/img/style (13).jpg'
+import imgService3 from '../../asset/img/style (8).jfif'
+import imgService4 from '../../asset/img/style (2).jfif'
 
 export default function SecAboutUs() {
   return (
@@ -17,10 +19,10 @@ export default function SecAboutUs() {
           </div>
           <div className='images'>
             <div className="about-us-card card-2">
-              <img src={imgService} />
+              <img src={imgService3} />
             </div>
             <div className="about-us-card">
-              <img src={imgService2} />
+              <img src={imgService4} />
             </div>
           </div>
         </div>

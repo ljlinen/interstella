@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 export default function Home() {
   const homeDataObj = useRequest();
   useEffect(() => {
-    console.log('home page rerender');
+    console.count('home page rerender');
   },[])
   return (
     <div>

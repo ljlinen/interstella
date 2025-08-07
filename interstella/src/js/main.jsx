@@ -8,8 +8,8 @@ import Home from './page/Home';
 import ServiceOutlet from './component/ServiceOutlet';
 import Debugger from './page/Debugger';
 
-const productionMode = false
-export const ENDPOINT =  productionMode ? 'https://interstellabackend.vercel.app' : 'http://localhost:3000'
+const productionMode = true
+export const ENDPOINT =  productionMode ? 'https://interstellabackend.vercel.app' : 'http://127.0.0.1:3006'
 
 const routes = [
   {
@@ -26,11 +26,15 @@ const routes = [
   }
 ]
 
-const router = createBrowserRouter(routes, {basename: '/interstella/'})
-const root = createRoot(document.getElementById('root'))
+const router = createBrowserRouter(routes, { basename: '/interstella/' })
 
-root.render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
+const container = document.getElementById('root')
+if (!window._reactRoot) {
+  window._reactRoot = createRoot(container)
+}
+
+window._reactRoot.render(
+  // <StrictMode>
+  <RouterProvider router={router} />
+  // </StrictMode>
 )

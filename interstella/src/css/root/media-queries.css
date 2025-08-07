@@ -42,8 +42,8 @@
       max-width: 600px;
     }
 
-  .body.service-is-active {
-    height: 830px !important;
-  }
+    .body.service-is-active {
+      height: 830px !important;
+    }
   }
 }

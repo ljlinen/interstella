@@ -1,35 +1,35 @@
-import style1 from '../../asset/img/style (1).jpg'
-import style2 from '../../asset/img/style (2).jpg'
-import style3 from '../../asset/img/style (3).jpg'
-import style4 from '../../asset/img/style (4).jpg'
-import style5 from '../../asset/img/style (5).jpg'
-import style6 from '../../asset/img/style (6).jpg'
-import style7 from '../../asset/img/style (7).jpg'
+import style1 from '../../asset/img/style (1).jfif'
+import style2 from '../../asset/img/style (5).jfif'
+import style3 from '../../asset/img/style (3).jfif'
+import style4 from '../../asset/img/style (8).jfif'
+import style5 from '../../asset/img/style (2).jfif'
+import style6 from '../../asset/img/style (10).jpg'
+import style7 from '../../asset/img/style (11).jpg'
 
 export default function useRequestData() {
   
   const data = {
     hairStyles: [
       {
-        images: [style1, style2, style3],
+        images: [style1, style1],
       },
       {
-        images: [style2, style2, style3],
+        images: [style2, style2],
       },
       {
-        images: [style3, style2, style3],
+        images: [style3, style3],
       },
       {
-        images: [style4, style2, style3],
+        images: [style4, style4],
       },
       {
-        images: [style5, style2, style3],
+        images: [style5, style5],
       },
       {
-        images: [style6, style2, style3],
+        images: [style6, style6],
       },
       {
-        images: [style7, style2, style3],
+        images: [style7, style7],
       }
     ]
   }

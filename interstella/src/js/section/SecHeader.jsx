@@ -30,7 +30,9 @@ export default function SecHeader() {
         </div>
       </nav>
       <div className="header-body">
-        <h1>Feel Amazing. Look Stunning. Leave Radiant.</h1>
+        <h1>Feel Amazing. </h1>
+        <h1>Look Stunning. </h1>
+        <h1>Leave Radiant.</h1>
         <p>Interstella is your go-to beauty studio for hair, nails, and glow-up essentials. Whether you&apos;re prepping for an event or just need some well-earned self-care.<span>learn more</span></p>
         <div className="call-to-action">
           <Button text={'Schedule Appointment'} animate={true} callback={() => ScrollToElement('.secappointments')}>

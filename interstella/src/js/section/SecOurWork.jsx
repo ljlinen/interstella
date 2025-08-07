@@ -13,9 +13,11 @@ export default function SecOurWork({ data }) {
   
   const isLocationService = useIsLocationService()
   const [prevPosition, setPrevPosition] = useState(0)
+  const [isPositionEnd, setIsPositionEnd] = useState({left: true})
 
   const { hairStyles } = useRequestData()
   const { Scroll, refContainer } = useScrollButtons('x', .5)
+  
 
 
   /**
@@ -35,6 +37,25 @@ export default function SecOurWork({ data }) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLocationService, refContainer])
+
+  useEffect(() => {
+
+  }, [isPositionEnd])
+
+  useEffect(() => {
+    const elem = refContainer.current
+    
+    if(elem) {
+      elem.onscroll = (e) => {
+        const elem = e.target
+        setIsPositionEnd({ 
+          left: (elem.scrollLeft < 1), 
+          right: (elem.scrollLeft + elem.clientWidth >= elem.scrollWidth)
+        })
+      }
+
+    }
+  }, [refContainer])
 
 
   return (
@@ -63,10 +84,10 @@ export default function SecOurWork({ data }) {
           <Outlet />
         </div>
         <div className="work-scroll-buttons" style={{display: data ? 'flex' : 'none'}}>
-          <Button callback={() => Scroll(false)}>
+          <Button classes={isPositionEnd?.left ? 'hide' : ''} callback={() => Scroll(false)}>
             <IconArrow style={{transform: 'rotate(-90deg)'}} />
           </Button>
-          <Button callback={() => Scroll(true)}>
+          <Button classes={isPositionEnd?.right ? 'hide' : ''} callback={() => Scroll(true)}>
             <IconArrow style={{transform: 'rotate(90deg)'}} />
           </Button>
         </div>

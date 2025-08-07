@@ -132,8 +132,9 @@ header {
   }
 
   .header-body h1 {
-    font-size: clamp(4.2rem, 3.8vw, 4.9rem);
-    max-width: clamp(240px, calc(43vw - 16px), 344px);
+    line-height: 0.6;
+    font-size: clamp(3.2rem, 3.8vw, 4.9rem);
+    /* max-width: clamp(240px, calc(43vw - 16px), 344px); */
   }
 
   .header-body p {
